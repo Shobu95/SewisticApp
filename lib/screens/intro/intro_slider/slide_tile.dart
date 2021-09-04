@@ -36,29 +36,27 @@ class SlideTile extends StatelessWidget {
     );
   }
 
-  static List<SlideTile> createSlides() {
-    List<SlideTile> slideTiles = new List<SlideTile>();
-
-    slideTiles.add(SlideTile(
-      imagePath: "assets/images/delivery.png",
-      title: "We Pick",
-      desc:
-          "Once you place your order, our representative will call you and a time will be scheduled for the pickup.",
-    ));
-
-    slideTiles.add(SlideTile(
-      imagePath: "assets/images/tailor.png",
-      title: "We Stitch",
-      desc:
-          "We have skilled and highly professional stitching team, providing you a way to incorporate your individuality to your garments.",
-    ));
-
-    slideTiles.add(SlideTile(
-      imagePath: "assets/images/dress.png",
-      title: "We Deliver",
-      desc:
-          "After stitching the outfit will be delivered at your place, in next 5 working days.",
-    ));
+  static List<SlideTile> createSlideTiles() {
+    List<SlideTile> slideTiles = [
+      new SlideTile(
+        imagePath: "assets/images/delivery.png",
+        title: "We Pick",
+        desc:
+            "Once you place your order, our representative will call you and a time will be scheduled for the pickup.",
+      ),
+      new SlideTile(
+        imagePath: "assets/images/tailor.png",
+        title: "We Stitch",
+        desc:
+            "We have skilled and highly professional stitching team, providing you a way to incorporate your individuality to your garments.",
+      ),
+      new SlideTile(
+        imagePath: "assets/images/dress.png",
+        title: "We Deliver",
+        desc:
+            "After stitching the outfit will be delivered at your place, in next 5 working days.",
+      ),
+    ];
 
     return slideTiles;
   }

@@ -31,66 +31,75 @@ class _IntroSliderState extends State<IntroSlider> {
                 slideIndex = index;
               });
             },
-            children: SlideTile.createSlides(),
+            children: SlideTile.createSlideTiles(),
           ),
         ),
-        bottomSheet: slideIndex != 2 ? _sliderIndicator() : _getStartedButton(),
+        bottomSheet: slideIndex != 2 ? sliderBottomBar() : getStartedButton(),
       ),
     );
   }
 
-  Widget _sliderIndicator() {
+  Widget sliderBottomBar() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          FlatButton(
-            onPressed: () {
-              controller.animateToPage(
-                2,
-                duration: Duration(milliseconds: 400),
-                curve: Curves.linear,
-              );
-            },
-            splashColor: Colors.pink[500],
-            child: Text(
-              "SKIP",
-              style: TextStyle(
-                color: Theme.of(context).primaryColor,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          Container(
-            child: Row(
-              children: [
-                for (int i = 0; i < 3; i++)
-                  i == slideIndex
-                      ? _pageIndicatorDot(true)
-                      : _pageIndicatorDot(false),
-              ],
-            ),
-          ),
-          FlatButton(
-            onPressed: () {
-              controller.animateToPage(slideIndex + 1,
-                  duration: Duration(milliseconds: 500), curve: Curves.linear);
-            },
-            splashColor: Colors.pink[500],
-            child: Text(
-              "NEXT",
-              style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.w600),
-            ),
-          ),
+          skipButton(),
+          sliderIndicator(),
+          nextButton(),
         ],
       ),
     );
   }
 
-  Widget _pageIndicatorDot(bool isCurrentPage) {
+  FlatButton skipButton() {
+    return FlatButton(
+      splashColor: Colors.pink[500],
+      child: Text(
+        "SKIP",
+        style: TextStyle(
+          color: Theme.of(context).primaryColor,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      onPressed: () {
+        controller.animateToPage(
+          2,
+          duration: Duration(milliseconds: 400),
+          curve: Curves.linear,
+        );
+      },
+    );
+  }
+
+  Widget sliderIndicator() {
+    return Container(
+      child: Row(
+        children: [
+          for (int i = 0; i < 3; i++)
+            i == slideIndex ? pageIndicatorDot(true) : pageIndicatorDot(false),
+        ],
+      ),
+    );
+  }
+
+  FlatButton nextButton() {
+    return FlatButton(
+      splashColor: Colors.pink[500],
+      child: Text(
+        "NEXT",
+        style: TextStyle(
+            color: Theme.of(context).primaryColor, fontWeight: FontWeight.w600),
+      ),
+      onPressed: () {
+        controller.animateToPage(slideIndex + 1,
+            duration: Duration(milliseconds: 500), curve: Curves.linear);
+      },
+    );
+  }
+
+  Widget pageIndicatorDot(bool isCurrentPage) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 2.0),
       height: isCurrentPage ? 10.0 : 6.0,
@@ -102,12 +111,8 @@ class _IntroSliderState extends State<IntroSlider> {
     );
   }
 
-  Widget _getStartedButton() {
+  Widget getStartedButton() {
     return InkWell(
-      onTap: () {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => CoreScreen()));
-      },
       child: Container(
         height: 60,
         color: Theme.of(context).primaryColor,
@@ -117,6 +122,10 @@ class _IntroSliderState extends State<IntroSlider> {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),
       ),
+      onTap: () {
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => CoreScreen()));
+      },
     );
   }
 }
