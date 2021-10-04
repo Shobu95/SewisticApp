@@ -19,9 +19,7 @@ class SplashScreen extends StatelessWidget {
               highlightColor: Colors.white.withOpacity(0.7),
               child: Container(
                 height: 110,
-                child: Image.asset('assets/images/sewistic-logo-web.png',
-                  fit: BoxFit.fill,
-                ),
+                child: Image.asset('assets/images/sewistic-logo-web.png', fit: BoxFit.fill,),
               ),
 
             )
