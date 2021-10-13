@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_swiper: ^1.1.6
   flutter:
     sdk: flutter
 

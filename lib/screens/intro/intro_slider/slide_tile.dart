@@ -1,63 +1,40 @@
-import 'package:flutter/material.dart';
+class SlideTile{
+  final int position;
+  final double height;
+  final String imagePath;
+  final String title;
+  final String desc;
 
-class SlideTile extends StatelessWidget {
-  String imagePath, title, desc;
-
-  SlideTile({this.imagePath, this.title, this.desc});
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 28),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(imagePath),
-            SizedBox(
-              height: 40,
-            ),
-            Text(
-              title,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              desc,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 14),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  static List<SlideTile> createSlideTiles() {
-    List<SlideTile> slideTiles = [
-      new SlideTile(
-        imagePath: "assets/images/delivery.png",
-        title: "We Pick",
-        desc:
-            "Once you place your order, our representative will call you and a time will be scheduled for the pickup.",
-      ),
-      new SlideTile(
-        imagePath: "assets/images/tailor.png",
-        title: "We Stitch",
-        desc:
-            "We have skilled and highly professional stitching team, providing you a way to incorporate your individuality to your garments.",
-      ),
-      new SlideTile(
-        imagePath: "assets/images/dress.png",
-        title: "We Deliver",
-        desc:
-            "After stitching the outfit will be delivered at your place, in next 5 working days.",
-      ),
-    ];
-
-    return slideTiles;
-  }
+  SlideTile(
+    this.position,
+    {
+      this.height,
+    this.imagePath,
+    this.title,
+    this.desc,
+  });
 }
+
+List<SlideTile> intro_image = [
+  SlideTile(1,
+    imagePath: "assets/images/delivery.png",
+    title: "We Pick",
+    height: 70.0,
+    desc:
+    "Once you place your order, our representative will call you and a time will be scheduled for the pickup.",
+  ),
+  SlideTile(2,
+    imagePath: "assets/images/tailor.png",
+    title: "We Stitch",
+    height: 40.0,
+    desc:
+    "We have skilled and highly professional stitching team, providing you a way to incorporate your individuality to your garments.",
+  ),
+  SlideTile(3,
+    height: 100.0,
+    imagePath: "assets/images/dress.png",
+    title: "We Deliver",
+    desc:
+    "After stitching the outfit will be delivered at your place, in next 5 working days.",
+  ),
+];
