@@ -27,7 +27,7 @@ dependencies:
   cupertino_icons: ^0.1.3
   carousel_slider: ^2.2.1
   animations: ^1.1.2
-  rect_getter:
+  page_transition: ^2.0.4
 
 
 dev_dependencies:
