@@ -28,7 +28,6 @@ dependencies:
   carousel_slider: ^4.0.0
   animations: ^1.1.2
   page_transition: ^2.0.4
-  shimmer: ^1.0.1
 
 dev_dependencies:
   network_image_mock: ^2.0.1
