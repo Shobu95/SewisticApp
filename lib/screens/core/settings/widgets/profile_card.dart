@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sewistic_app/shared/constants.dart';
 
@@ -7,9 +8,59 @@ class ProfileCard extends StatefulWidget {
 }
 
 class _ProfileCardState extends State<ProfileCard> {
+
   @override
   Widget build(BuildContext context) {
-    return Card(
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+         // padding: EdgeInsets.fromLTRB(5, 5, 5, 0),
+          width: width*0.4,
+          height: height*0.3,
+          decoration: BoxDecoration(
+            border:Border.all(color: Colors.pink),
+            shape: BoxShape.circle,
+            color: Colors.pink,
+            image: DecorationImage(
+              fit: BoxFit.contain,
+              image: AssetImage('assets/images/avatar.png')
+            )
+          ),
+          ),
+          Stack(
+            children: [
+          Container(
+                  height: height*0.07,
+                decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(10),
+              ),
+          ),
+              Positioned(
+
+                child: Row(
+                children: [
+                  Padding(padding: EdgeInsets.fromLTRB(width*0.25, 0, 0, 0)),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(padding: EdgeInsets.fromLTRB(0, height*0.01, 0, 0)),
+                      Text('Benjamin Rogers',style: TextStyle(fontSize: 15,color: Colors.white),),
+                      Text('ben.rogers@gmail.com',style: TextStyle(fontSize: 15,color: Colors.white),),
+                    ],
+                  ),
+                ],
+              ),
+              ),
+            ],
+          )
+      ],
+    );
+      /*Card(
       elevation: Constants.CARD_ELEVATION,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -60,6 +111,6 @@ class _ProfileCardState extends State<ProfileCard> {
           ],
         ),
       ),
-    );
+    );*/
   }
 }
