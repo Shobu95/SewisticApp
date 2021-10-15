@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sewistic_app/screens/core/core.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:sewistic_app/screens/intro/intro_slider/slide_tile.dart';
 
 class IntroSlider extends StatefulWidget {
@@ -23,22 +24,85 @@ class _IntroSliderState extends State<IntroSlider> {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          height: MediaQuery.of(context).size.height - 100,
-          child: PageView(
-            controller: controller,
-            onPageChanged: (index) {
-              setState(() {
-                slideIndex = index;
-              });
-            },
-            children: SlideTile.createSlideTiles(),
+          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Theme.of(context).primaryColor,Color(0xfffc58c0)],
+              begin: Alignment.topCenter,
+              end:Alignment.bottomCenter,
+              stops:[0.4,0.8],
+            )
           ),
-        ),
-        bottomSheet: slideIndex != 2 ? sliderBottomBar() : getStartedButton(),
+          padding: const  EdgeInsets.only(left: 32,),
+          child: Swiper(
+              itemCount: intro_image.length,
+              itemWidth: MediaQuery.of(context).size.width -100,
+              layout: SwiperLayout.STACK,
+            pagination: SwiperPagination(
+              builder: DotSwiperPaginationBuilder(
+                activeSize: 10,
+                space: 8,
+                activeColor: Theme.of(context).primaryColor,
+              ),
+            ),
+            itemBuilder: (context,index){
+                return Stack(
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        SizedBox(height: 100.0,),
+                        Card(
+                          elevation: 8,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(32.0),
+                          ),
+                          color: Colors.white,
+                          child: Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Column(
+
+                              children: [
+                                SizedBox(height: intro_image[index].height,),
+                                Image.asset(intro_image[index].imagePath),
+                                Text(
+                                intro_image[index].title,
+                                  style: TextStyle(
+                                    fontFamily: 'Avenir',
+                                    fontSize: 40,
+                                    color: const Color(0xff47455f),
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                                Text(
+                                  intro_image[index].desc,
+                                  style: TextStyle(
+                                    fontFamily: 'Avenir',
+                                    fontSize: 20,
+                                    color: const Color(0xff47455f),
+                                    //fontWeight: FontWeight.w500,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                ),
+                                SizedBox(height: 32,),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                );
+            },
+          ),
+      ),
+        bottomNavigationBar: getStartedButton(),
       ),
     );
   }
 
+  //Not required now,I am leaving this in case somebody needs to use this
+/*
   Widget sliderBottomBar() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8),
@@ -109,7 +173,7 @@ class _IntroSliderState extends State<IntroSlider> {
         borderRadius: BorderRadius.circular(12),
       ),
     );
-  }
+  }*/
 
   Widget getStartedButton() {
     return InkWell(

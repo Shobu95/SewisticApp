@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 ThemeData sewisticTheme() {
   return ThemeData(
-    primaryColor: Colors.pink[500],
-    accentColor: Colors.pink[500],
+    primaryColor: Color(0xfff018a8),
+    accentColor: Color(0xfff018a8),
     iconTheme: IconThemeData(color: Colors.black),
     textTheme: textTheme(),
     pageTransitionsTheme: PageTransitionsTheme(

@@ -9,20 +9,17 @@ class SettingsCard extends StatefulWidget {
 class _SettingsCardState extends State<SettingsCard> {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: Constants.CARD_ELEVATION,
-      child: Column(
+    return Column(
         children: [
           _listTile("Personal Data", Icons.person_outline, () => null),
-          _divider(2, 10),
+
           _listTile("My Addresses", Icons.location_on_outlined, () => null),
-          _divider(2, 10),
+
           _listTile("Change Password", Icons.lock_outline, () => null),
-          _divider(2, 10),
+
           _listTile("Logout", Icons.logout, () => null)
         ],
-      ),
-    );
+      );
   }
 
   Divider _divider(double _height, double _indent) {
@@ -34,16 +31,26 @@ class _SettingsCardState extends State<SettingsCard> {
     );
   }
 
-  ListTile _listTile(String _title, IconData _icon, _onTap()) {
-    return ListTile(
-      onTap: _onTap,
-      leading: Icon(
-        _icon,
-        color: Theme.of(context).primaryColor,
-      ),
-      title: Text(
-        _title,
-      ),
+  FlatButton _listTile(String _title, IconData _icon, _onTap()) {
+
+    return FlatButton(
+        padding: EdgeInsets.all(20),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        color: Color(0xFFF5F6F9),
+        onPressed: () {},
+        child: Row(
+          children: [
+            Icon(_icon,
+            color: Colors.pink[200],),
+            SizedBox(width: 20),
+            Expanded(child:Text(_title,
+                style: Theme.of(context).textTheme.bodyText1
+            )
+            ),
+            Icon(Icons.arrow_forward_ios)
+          ],
+        )
     );
   }
 }
+
