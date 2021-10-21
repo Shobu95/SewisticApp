@@ -1,4 +1,5 @@
 # SEWISTIC
+Hacktoberfest2021
 
 A flutter mobile application made for Sewistic, a Karachi based startup providing hassle free tailoring services.
 
