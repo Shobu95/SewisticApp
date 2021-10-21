@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import '../core.dart';
 
 class BottomNavBar extends StatefulWidget {
   final Function notifyParent;
-  int _selectedIndex;
-  BottomNavBar(this.notifyParent, this._selectedIndex);
+  final int _selectedIndex;
+  const BottomNavBar(this.notifyParent, this._selectedIndex);
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
 }
@@ -24,26 +23,26 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 
   List<BottomNavigationBarItem> _bottomNavBarItems() {
-    return const <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
+    return <BottomNavigationBarItem>[
+      const BottomNavigationBarItem(
         icon: Icon(Icons.home),
-        title: Text('Home'),
+        label: 'Home',
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.search),
-        title: Text('Search'),
+        label: 'Search',
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.favorite),
-        title: Text('Wishlist'),
+        label: 'Wishlist',
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.shopping_basket),
-        title: Text('Orders'),
+        label: 'Orders',
       ),
-      BottomNavigationBarItem(
+      const BottomNavigationBarItem(
         icon: Icon(Icons.settings),
-        title: Text('Settings'),
+        label: 'Settings',
       ),
     ];
   }

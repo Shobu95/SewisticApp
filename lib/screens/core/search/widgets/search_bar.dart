@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sewistic_app/shared/constants.dart';
 
 class SearchBar extends StatelessWidget {
-  GlobalKey<ScaffoldState> scaffoldKey;
+  final GlobalKey<ScaffoldState> scaffoldKey;
 
-  SearchBar(this.scaffoldKey);
+  const SearchBar(this.scaffoldKey);
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +17,13 @@ class SearchBar extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14),
         child: Row(
           children: [
-            Icon(Icons.search),
+            const Icon(Icons.search),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
                 child: TextField(
                   cursorColor: Theme.of(context).primaryColor,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Search for products',
                     border: InputBorder.none,
                   ),
@@ -32,12 +32,12 @@ class SearchBar extends StatelessWidget {
             ),
             Material(
               color: Colors.transparent,
-              shape: CircleBorder(),
+              shape: const CircleBorder(),
               clipBehavior: Clip.hardEdge,
               child: InkWell(
                 splashColor: Colors.pink[200],
                 child: Container(
-                  child: Icon(Icons.tune),
+                  child: const Icon(Icons.tune),
                 ),
                 onTap: () {
                   scaffoldKey.currentState.openEndDrawer();

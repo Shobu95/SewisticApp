@@ -5,8 +5,8 @@ class ProductService {
   List<Product> _products;
 
   List<Product> getHomeProducts() {
-    _products = new List<Product>();
-    _products.add(new Product(
+    _products = <Product>[];
+    _products.add(Product(
       'Classic 2-piece Deal',
       '650',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/06/deal-01-1-scaled.jpg?fit=252%2C300&ssl=1',
@@ -17,7 +17,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Classic 3-piece Deal',
       '799',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/06/deal-02-1-scaled.jpg?fit=252%2C300&ssl=1',
@@ -28,7 +28,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Combo-Classic 2-piece Deal',
       '999',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/06/deal-03-1-scaled.jpg?fit=840%2C1001&ssl=1',
@@ -39,7 +39,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Combo–Classic 3-piece Deal',
       '1199',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/06/deal-04-1-scaled.jpg?fit=840%2C1001&ssl=1',
@@ -51,7 +51,7 @@ class ProductService {
       ],
     ));
 
-    _products.add(new Product(
+    _products.add(Product(
       'Custom Order - 3 piece',
       '2800',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/04/poster-3-p-deal-festive.jpg?fit=600%2C716&ssl=1',
@@ -62,7 +62,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Fancy 3 piece Deal',
       '1550',
       'https://sewistic.com/wp-content/uploads/2020/04/poster-3-p-deal-fency.jpg',
@@ -73,7 +73,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Festive 3 piece Deal',
       '1350',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/04/poster-3-p-deal-fency-1.jpg?fit=800%2C954&ssl=1',
@@ -84,7 +84,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Classic 3-piece Deal',
       '950',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/04/3-pclassic-dea-flower-lessgradient-bluedress.jpg?resize=252%2C300&ssl=1',
@@ -96,7 +96,7 @@ class ProductService {
       ],
     ));
 
-    _products.add(new Product(
+    _products.add(Product(
       'Kameez Shalwar',
       '950',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/05/shalwar-kameezposter.jpg?fit=800%2C954&ssl=1',
@@ -107,7 +107,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_MEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Shervani Collar Kurta',
       '750',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/05/SHERVANI-COLLAR-KURTA-SINGLE-BANNER.jpg?fit=800%2C954&ssl=1',
@@ -117,7 +117,7 @@ class ProductService {
         ClothDesignOptions.POCKET(),
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Shervani Collar Kurta Shalwar',
       '950',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/05/shervani-collar-kurta-shalwar-stiching.jpg?w=800&ssl=1',
@@ -128,7 +128,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_MEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Shirt Collar Kurta Shalwar',
       '950',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/05/collared-Kurta-banner.jpg?w=800&ssl=1',
@@ -140,7 +140,7 @@ class ProductService {
       ],
     ));
 
-    _products.add(new Product(
+    _products.add(Product(
       'Cape Classic',
       '999',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/05/capes-classic-banner.jpg?w=800&ssl=1',
@@ -151,7 +151,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Peplum Angrakha',
       '1400',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/05/product-Peplum-Angarkha-banner.jpg?w=800&ssl=1',
@@ -162,7 +162,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Peplum Festive',
       '1400',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/04/Peplum-Festive-Stiching-Banner.jpg?w=800&ssl=1',
@@ -173,7 +173,7 @@ class ProductService {
         ClothDesignOptions.BOTTOMS_WOMEN()
       ],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Peplum Classic',
       '1200',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/04/Peplum-Classic-Banner.jpg?w=800&ssl=1',
@@ -185,28 +185,28 @@ class ProductService {
       ],
     ));
 
-    _products.add(new Product(
+    _products.add(Product(
       'Sewistic Classic Gharara',
       '2700',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/04/Ghrara-3.jpg?w=800&ssl=1',
       "Sewistic Classic Gharara stitching features the stitching of Gharara with the neckline & sleeves your choice, with a pair of wide-legged pants, ruched at the knee so they flare out dramatically.",
       [ClothDesignOptions.NECK_LINES(), ClothDesignOptions.SLEEVES_WOMEN()],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Sewistic Festive Lehenga',
       '6500',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/04/Lehnga-festive.jpg?w=800&ssl=1',
       "Sewistic Festive Lehenga stitching features the stitching of Lehenga with the neckline & sleeves of your choice, with a flared hem. Designed with heavy zari and Dori embroidery work all over enhanced by sparkly stone, beads, and mirror embellishments.",
       [ClothDesignOptions.NECK_LINES(), ClothDesignOptions.SLEEVES_WOMEN()],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Sewistic Classic Lehenga',
       '4500',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/04/Lengha-Classic-1.jpg?w=800&ssl=1',
       "Sewistic Classic Lehenga stitching features the stitching of Lehenga with the neckline & sleeves of your choice, with a flared hem, embellished in Stones, Beads, mesh and Dori work with complete piping detailing.",
       [ClothDesignOptions.NECK_LINES(), ClothDesignOptions.SLEEVES_WOMEN()],
     ));
-    _products.add(new Product(
+    _products.add(Product(
       'Sewistic Festive Sharara',
       '4500',
       'https://i0.wp.com/sewistic.com/wp-content/uploads/2020/04/1-Sharara-festivePS.jpg?w=800&ssl=1',
@@ -218,9 +218,9 @@ class ProductService {
   }
 
   List<Product> getWishList() {
-    _products = new List<Product>();
+    _products = <Product>[];
 
-    _products.add(new Product(
+    _products.add(Product(
       'Shervani Collar Kurta',
       '750',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/05/SHERVANI-COLLAR-KURTA-SINGLE-BANNER.jpg?fit=800%2C954&ssl=1',
@@ -232,7 +232,7 @@ class ProductService {
       ],
     ));
 
-    _products.add(new Product(
+    _products.add(Product(
       'Sewistic Classic Lehenga',
       '4500',
       'https://i2.wp.com/sewistic.com/wp-content/uploads/2020/04/Lengha-Classic-1.jpg?w=800&ssl=1',
@@ -240,7 +240,7 @@ class ProductService {
       [ClothDesignOptions.NECK_LINES(), ClothDesignOptions.SLEEVES_WOMEN()],
     ));
 
-    _products.add(new Product(
+    _products.add(Product(
       'Cape Classic',
       '999',
       'https://i1.wp.com/sewistic.com/wp-content/uploads/2020/05/capes-classic-banner.jpg?w=800&ssl=1',

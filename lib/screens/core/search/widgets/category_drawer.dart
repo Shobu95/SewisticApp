@@ -22,7 +22,7 @@ List<String> sortingOptions = [
 class CategoryDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 250,
       child: Drawer(
         child: Padding(
@@ -32,7 +32,7 @@ class CategoryDrawer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(bottom: 8),
+                  margin: const EdgeInsets.only(bottom: 8),
                   child: Text(
                     'Categories',
                     style: TextStyle(
@@ -56,7 +56,7 @@ class CategoryDrawer extends StatelessWidget {
     return ExpansionTile(
       title: Text(
         categoryTitle,
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
       ),
       children: [
         Padding(
@@ -64,7 +64,7 @@ class CategoryDrawer extends StatelessWidget {
           child: ListView.builder(
             itemCount: options.length,
             shrinkWrap: true,
-            physics: ClampingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             itemBuilder: (context, index) {
               return ListTile(title: Text(options[index]), onTap: () => null);
             },

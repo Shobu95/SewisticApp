@@ -3,12 +3,12 @@ import 'package:sewistic_app/models/order/order.dart';
 import 'package:sewistic_app/shared/constants.dart';
 
 class OrderCard extends StatelessWidget {
-  Order order;
-  OrderCard(this.order);
+  final Order order;
+  const OrderCard(this.order);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Card(
         elevation: Constants.CARD_ELEVATION,
@@ -32,20 +32,20 @@ class OrderCard extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
               Text(
                 order.productName,
                 style: Theme.of(context).textTheme.headline1,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               order.noOfProducts > 1
                   ? Text((order.noOfProducts - 1).toString() + ' more items')
-                  : SizedBox(),
-              SizedBox(
+                  : const SizedBox(),
+              const SizedBox(
                 height: 4,
               ),
               Row(
@@ -60,7 +60,7 @@ class OrderCard extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
                       border: Border.all(color: order.statusColor, width: 1.5),
-                      borderRadius: BorderRadius.all(
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(3),
                       ),
                     ),

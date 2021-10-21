@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sewistic_app/models/product/product.dart';
 import 'package:sewistic_app/screens/core/home/widgets/image_slider.dart';
-import 'package:sewistic_app/screens/core/product/product_card_home.dart';
 import 'package:sewistic_app/screens/core/home/widgets/title_divider.dart';
+import 'package:sewistic_app/screens/core/product/product_card_home.dart';
 import 'package:sewistic_app/screens/core/product/product_details/product_details.dart';
 import 'package:sewistic_app/services/product_services.dart';
 import 'package:sewistic_app/shared/card_animations.dart';
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height,
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -37,15 +37,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 elevation: Constants.CARD_ELEVATION,
                 child: ImagesSlider(),
               ),
-              TitleDivider('Top Picks'),
+              const TitleDivider('Top Picks'),
               _horizontalList(_homeProducts.sublist(0, 4)),
-              TitleDivider('Best Sellers'),
+              const TitleDivider('Best Sellers'),
               _horizontalList(_homeProducts.sublist(4, 8)),
-              TitleDivider('Men'),
+              const TitleDivider('Men'),
               _horizontalList(_homeProducts.sublist(8, 12)),
-              TitleDivider('New Arrivals'),
+              const TitleDivider('New Arrivals'),
               _horizontalList(_homeProducts.sublist(12, 16)),
-              TitleDivider('Premium'),
+              const TitleDivider('Premium'),
               _horizontalList(_homeProducts.sublist(16)),
             ],
           ),

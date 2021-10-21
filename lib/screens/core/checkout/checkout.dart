@@ -28,7 +28,7 @@ class _CheckoutState extends State<Checkout> {
 
   AppBar _appBar() {
     return AppBar(
-      title: Text(
+      title: const Text(
         'Checkout',
         style: TextStyle(color: Colors.black),
       ),
@@ -40,7 +40,7 @@ class _CheckoutState extends State<Checkout> {
 
   Widget _body() {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Column(
         children: [
           Expanded(
@@ -50,7 +50,7 @@ class _CheckoutState extends State<Checkout> {
               ),
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
           ),
           Container(
@@ -71,7 +71,7 @@ class _CheckoutState extends State<Checkout> {
         children: [
           Text(
             _buttonName,
-            style: TextStyle(color: Colors.white, fontSize: 16),
+            style: const TextStyle(color: Colors.white, fontSize: 16),
           ),
         ],
       ),

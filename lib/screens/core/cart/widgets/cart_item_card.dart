@@ -2,14 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sewistic_app/models/order/cart_item.dart';
+import 'package:sewistic_app/screens/core/cart/cart.dart';
 import 'package:sewistic_app/shared/constants.dart';
 
-import '../cart.dart';
-
 class CartItemCard extends StatefulWidget {
-  CartItem cartItem;
-  CartState parentState;
-  CartItemCard(this.cartItem, this.parentState);
+  final CartItem cartItem;
+  final CartState parentState;
+  const CartItemCard(this.cartItem, this.parentState, {Key key}) : super(key: key);
 
   @override
   _CartItemCardState createState() => _CartItemCardState();
@@ -35,7 +34,7 @@ class _CartItemCardState extends State<CartItemCard> {
         child: Row(
           children: [
             Container(
-                margin: EdgeInsets.only(right: 6),
+                margin: const EdgeInsets.only(right: 6),
                 width: 20,
                 child: Checkbox(
                   value: _cartItem.isSelected,
@@ -49,7 +48,7 @@ class _CartItemCardState extends State<CartItemCard> {
             Container(
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey),
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(2),
                 ),
               ),
@@ -67,27 +66,27 @@ class _CartItemCardState extends State<CartItemCard> {
                     Text(
                       widget.cartItem.product.name,
                       maxLines: 2,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 6,
                     ),
                     Text(
                       widget.cartItem.designOptions.join(', '),
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 4,
                     ),
                     Text(
                       widget.cartItem.measurementOption,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.grey, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
                     Row(
@@ -95,7 +94,7 @@ class _CartItemCardState extends State<CartItemCard> {
                       children: [
                         Text(
                           'Rs.' + widget.cartItem.product.price,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.pink,
                               fontWeight: FontWeight.bold,
                               fontSize: 16),

@@ -17,7 +17,7 @@ class _ProfileCardState extends State<ProfileCard> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Align(
-              alignment: Alignment(1.0, -0.9),
+              alignment: const Alignment(1.0, -0.9),
               heightFactor: 0.1,
               child: IconButton(
                 onPressed: null,
@@ -32,7 +32,7 @@ class _ProfileCardState extends State<ProfileCard> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 42,
                     backgroundColor: Colors.black,
                     child: CircleAvatar(

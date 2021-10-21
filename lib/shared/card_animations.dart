@@ -10,7 +10,7 @@ Widget ProductToDetailsAnimation(
     transitionType: ContainerTransitionType.fade,
     closedColor: Colors.transparent,
     closedElevation: 0,
-    closedShape: RoundedRectangleBorder(
+    closedShape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(0.0)),
     ),
     onClosed: onClosed,

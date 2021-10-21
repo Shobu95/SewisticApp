@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sewistic_app/models/order/cart_item.dart';
 
 class OrderSummaryItem extends StatelessWidget {
-  CartItem item;
+  final CartItem item;
 
-  OrderSummaryItem({this.item});
+  const OrderSummaryItem({this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -15,27 +15,27 @@ class OrderSummaryItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(item.product.name,
-                maxLines: 2, style: TextStyle(color: Colors.black)),
-            SizedBox(
+                maxLines: 2, style: const TextStyle(color: Colors.black)),
+            const SizedBox(
               height: 4,
             ),
             Text(item.designOptions.join(', '),
-                style: TextStyle(color: Colors.grey)),
-            SizedBox(
+                style: const TextStyle(color: Colors.grey)),
+            const SizedBox(
               height: 4,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(item.measurementOption,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.grey, fontWeight: FontWeight.bold)),
                 Text('Rs.' + item.product.price,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.pink, fontWeight: FontWeight.bold)),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
           ],

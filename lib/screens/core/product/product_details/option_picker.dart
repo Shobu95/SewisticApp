@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sewistic_app/models/order/design_type.dart';
 
 class OptionPicker extends StatefulWidget {
-  DesignType designType;
+  final DesignType designType;
 
-  OptionPicker(this.designType);
+  const OptionPicker(this.designType);
 
   @override
   _OptionPickerState createState() => _OptionPickerState();
@@ -34,7 +34,7 @@ class _OptionPickerState extends State<OptionPicker> {
           _designType.typeName +
               ": " +
               _designType.designOptions[selectedIndex].optionName,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         children: [
           SingleChildScrollView(
@@ -66,13 +66,13 @@ class _OptionPickerState extends State<OptionPicker> {
   Widget _optionTile(String optionImage) {
     return Container(
       width: 50,
-      margin: EdgeInsets.symmetric(horizontal: 2),
+      margin: const EdgeInsets.symmetric(horizontal: 2),
       child: Image.asset(optionImage),
     );
   }
 
   List<bool> _getSelected(int length) {
-    List<bool> selected = new List<bool>();
+    List<bool> selected = <bool>[];
     for (int i = 0; i < length; i++) {
       selected.add(false);
     }

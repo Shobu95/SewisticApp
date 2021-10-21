@@ -14,7 +14,7 @@ class _IntroSliderState extends State<IntroSlider> {
   @override
   void initState() {
     super.initState();
-    controller = new PageController();
+    controller = PageController();
   }
 
   @override
@@ -22,7 +22,7 @@ class _IntroSliderState extends State<IntroSlider> {
     return Container(
       child: Scaffold(
         backgroundColor: Colors.white,
-        body: Container(
+        body: SizedBox(
           height: MediaQuery.of(context).size.height - 100,
           child: PageView(
             controller: controller,
@@ -41,7 +41,7 @@ class _IntroSliderState extends State<IntroSlider> {
 
   Widget sliderBottomBar() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -66,7 +66,7 @@ class _IntroSliderState extends State<IntroSlider> {
       onPressed: () {
         controller.animateToPage(
           2,
-          duration: Duration(milliseconds: 400),
+          duration: const Duration(milliseconds: 400),
           curve: Curves.linear,
         );
       },
@@ -94,14 +94,14 @@ class _IntroSliderState extends State<IntroSlider> {
       ),
       onPressed: () {
         controller.animateToPage(slideIndex + 1,
-            duration: Duration(milliseconds: 500), curve: Curves.linear);
+            duration: const Duration(milliseconds: 500), curve: Curves.linear);
       },
     );
   }
 
   Widget pageIndicatorDot(bool isCurrentPage) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 2.0),
+      margin: const EdgeInsets.symmetric(horizontal: 2.0),
       height: isCurrentPage ? 10.0 : 6.0,
       width: isCurrentPage ? 10.0 : 6.0,
       decoration: BoxDecoration(
@@ -117,7 +117,7 @@ class _IntroSliderState extends State<IntroSlider> {
         height: 60,
         color: Theme.of(context).primaryColor,
         alignment: Alignment.center,
-        child: Text(
+        child: const Text(
           "GET STARTED NOW",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),

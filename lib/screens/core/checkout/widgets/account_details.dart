@@ -17,7 +17,7 @@ class _AccountDetailsState extends State<AccountDetails> {
             'Personal Details',
             style: Theme.of(context).textTheme.headline1,
           ),
-          SizedBox(
+          const SizedBox(
             height: 28,
           ),
           Row(
@@ -37,7 +37,7 @@ class _AccountDetailsState extends State<AccountDetails> {
 
   Widget _textField(String labelName, TextInputType inputType) {
     return Container(
-      padding: EdgeInsets.only(bottom: 18, left: 6, right: 6),
+      padding: const EdgeInsets.only(bottom: 18, left: 6, right: 6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -46,20 +46,20 @@ class _AccountDetailsState extends State<AccountDetails> {
             textAlign: TextAlign.left,
             style: Theme.of(context).textTheme.headline3,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           TextField(
-            style: TextStyle(fontSize: 18),
+            style: const TextStyle(fontSize: 18),
             keyboardType: inputType,
             decoration: InputDecoration(
               hintText: '',
-              contentPadding: EdgeInsets.all(8),
+              contentPadding: const EdgeInsets.all(8),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
                 borderSide: BorderSide(color: Colors.grey[700]),
               ),
-              focusedBorder: OutlineInputBorder(
+              focusedBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 borderSide: BorderSide(color: Colors.pink),
               ),
