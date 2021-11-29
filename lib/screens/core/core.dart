@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:sewistic_app/screens/core/cart/cart.dart';
+import 'package:sewistic_app/screens/core/core_widgets/bottom_nav_bar.dart';
+import 'package:sewistic_app/screens/core/core_widgets/nav_drawer.dart';
 import 'package:sewistic_app/screens/core/home/home.dart';
 import 'package:sewistic_app/screens/core/orders/orders.dart';
 import 'package:sewistic_app/screens/core/search/search.dart';
 import 'package:sewistic_app/screens/core/settings/settings.dart';
 import 'package:sewistic_app/screens/core/wishlist/wishlist.dart';
-import 'core_widgets/bottom_nav_bar.dart';
-import 'core_widgets/nav_drawer.dart';
 
 class CoreScreen extends StatefulWidget {
-  List<Widget> _coreScreens = [
+  final List<Widget> _coreScreens = [
     HomeScreen(),
     Search(),
     Wishlist(),
     Orders(),
     Settings()
   ];
+
+  CoreScreen({Key key}) : super(key: key);
 
   @override
   _CoreScreenState createState() => _CoreScreenState();
@@ -28,8 +30,8 @@ class _CoreScreenState extends State<CoreScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      drawer: NavDrawer(this.onItemTap, selectedIndex),
-      bottomNavigationBar: BottomNavBar(this.onItemTap, selectedIndex),
+      drawer: NavDrawer(onItemTap, selectedIndex),
+      bottomNavigationBar: BottomNavBar(onItemTap, selectedIndex),
       body: Container(
         color: Colors.grey[100],
         child: Center(
@@ -51,7 +53,7 @@ class _CoreScreenState extends State<CoreScreen> {
       ),
       actions: [
         IconButton(
-          icon: Icon(Icons.shopping_cart),
+          icon: const Icon(Icons.shopping_cart),
           onPressed: () {
             Navigator.push(
               context,

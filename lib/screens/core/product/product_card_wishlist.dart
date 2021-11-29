@@ -3,11 +3,11 @@ import 'package:sewistic_app/models/product/product.dart';
 import 'package:sewistic_app/shared/constants.dart';
 
 class ProductCardWishlist extends StatelessWidget {
-  Product product;
+  final Product product;
 
   final VoidCallback openContainer;
 
-  ProductCardWishlist({this.product, this.openContainer});
+  const ProductCardWishlist({this.product, this.openContainer});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ProductCardWishlist extends StatelessWidget {
       child: Card(
         elevation: Constants.CARD_ELEVATION,
         child: Container(
-          padding: EdgeInsets.all(4),
+          padding: const EdgeInsets.all(4),
           height: 150,
           child: Row(
             children: [
@@ -30,7 +30,7 @@ class ProductCardWishlist extends StatelessWidget {
                   children: [
                     Container(
                       alignment: Alignment.topRight,
-                      child: Icon(
+                      child: const Icon(
                         Icons.close,
                         size: 20,
                       ),
@@ -47,7 +47,7 @@ class ProductCardWishlist extends StatelessWidget {
                               maxLines: 2,
                               style: Theme.of(context).textTheme.headline1,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Text(

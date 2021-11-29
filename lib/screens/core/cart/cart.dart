@@ -21,7 +21,7 @@ class CartState extends State<Cart> {
   @override
   void initState() {
     super.initState();
-    _cartItemsServices = new CartItemsServices();
+    _cartItemsServices = CartItemsServices();
     _cartItems = _cartItemsServices.getCartItems();
     noItemSelected = false;
     getTotalItemsAndPrice();
@@ -34,7 +34,7 @@ class CartState extends State<Cart> {
 
   AppBar _appBar() {
     return AppBar(
-      title: Text(
+      title: const Text(
         'My Cart',
         style: TextStyle(color: Colors.black),
       ),
@@ -53,11 +53,11 @@ class CartState extends State<Cart> {
               child: _cartItemList(),
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.grey,
           ),
           Padding(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: Column(
               children: [
                 _voucherCode(),
@@ -86,7 +86,7 @@ class CartState extends State<Cart> {
 
   Widget _voucherCode() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -97,7 +97,7 @@ class CartState extends State<Cart> {
           InkWell(
               child: Text(
                 _couponCode,
-                style: TextStyle(color: Colors.green),
+                style: const TextStyle(color: Colors.green),
               ),
               onTap: () => _showDialog()),
         ],
@@ -112,7 +112,7 @@ class CartState extends State<Cart> {
           return Dialog(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4)), //this right here
-            child: Container(
+            child: SizedBox(
               height: 200,
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
@@ -121,22 +121,22 @@ class CartState extends State<Cart> {
                   children: [
                     TextField(
                       decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(8),
+                          contentPadding: const EdgeInsets.all(8),
                           border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(4.0)),
+                                const BorderRadius.all(Radius.circular(4.0)),
                             borderSide: BorderSide(color: Colors.grey[700]),
                           ),
                           hintText: 'Enter Voucher Code'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     FlatButton(
                       height: 45,
                       minWidth: double.infinity,
                       color: Colors.pink,
-                      child: Text(
+                      child: const Text(
                         'Enter',
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
@@ -157,7 +157,7 @@ class CartState extends State<Cart> {
 
   Widget _totalPriceArea() {
     return Container(
-      padding: EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10, top: 14, bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -186,14 +186,14 @@ class CartState extends State<Cart> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Checkout',
             style: TextStyle(color: Colors.white, fontSize: 16),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
-          Icon(
+          const Icon(
             Icons.arrow_forward_ios,
             color: Colors.white,
             size: 16,

@@ -18,7 +18,7 @@ class _MeasurementOptionsState extends State<MeasurementOptions> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.only(top: 12),
       child: Column(
         children: [
           ToggleButtons(
@@ -46,7 +46,7 @@ class _MeasurementOptionsState extends State<MeasurementOptions> {
   }
 
   Widget _optionTile(String title) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * 0.4,
       child: Center(child: Text(title)),
     );
@@ -110,7 +110,7 @@ class _MeasurementOptionsState extends State<MeasurementOptions> {
 
   Widget _measurementTextField(String labelName) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 12),
       width: MediaQuery.of(context).size.width * 0.4,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,20 +120,20 @@ class _MeasurementOptionsState extends State<MeasurementOptions> {
             textAlign: TextAlign.left,
             style: Theme.of(context).textTheme.headline3,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           TextField(
-            style: TextStyle(fontSize: 18),
+            style: const TextStyle(fontSize: 18),
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
               hintText: 'Inches',
-              contentPadding: EdgeInsets.all(8),
+              contentPadding: const EdgeInsets.all(8),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
                 borderSide: BorderSide(color: Colors.grey[700]),
               ),
-              focusedBorder: OutlineInputBorder(
+              focusedBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 borderSide: BorderSide(color: Colors.pink),
               ),

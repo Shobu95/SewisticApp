@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-ThemeData sewisticTheme() {
+ThemeData SewisticTheme() {
   return ThemeData(
     primaryColor: Colors.pink[500],
-    accentColor: Colors.pink[500],
-    iconTheme: IconThemeData(color: Colors.black),
+    iconTheme: const IconThemeData(color: Colors.black),
     textTheme: textTheme(),
-    pageTransitionsTheme: PageTransitionsTheme(
+    pageTransitionsTheme: const PageTransitionsTheme(
       builders: <TargetPlatform, PageTransitionsBuilder>{
         TargetPlatform.android: ZoomPageTransitionsBuilder(),
       },
     ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.pink[500]),
   );
 }
 
@@ -23,7 +23,7 @@ TextTheme textTheme() {
 }
 
 TextStyle headlineBlack() {
-  return TextStyle(
+  return const TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
     color: Colors.black,
@@ -39,7 +39,7 @@ TextStyle headlinePink() {
 }
 
 TextStyle normalLineBlack() {
-  return TextStyle(
+  return const TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.bold,
     color: Colors.black,

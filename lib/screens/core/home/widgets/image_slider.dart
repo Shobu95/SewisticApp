@@ -12,7 +12,7 @@ class ImagesSlider extends StatelessWidget {
         autoPlay: true,
         height: 120,
         enlargeCenterPage: true,
-        autoPlayInterval: Duration(seconds: 3),
+        autoPlayInterval: const Duration(seconds: 3),
       ),
     );
   }

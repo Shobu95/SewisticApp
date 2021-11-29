@@ -4,7 +4,9 @@ class DesignType {
 
   DesignType(this._typeName, this._designOptions);
 
-  String get typeName => _typeName;
+  String get typeName {
+    return _typeName;
+  }
 
   set typeName(String value) {
     _typeName = value;
@@ -12,9 +14,7 @@ class DesignType {
 
   List<DesignOption> get designOptions => _designOptions;
 
-  set designOptions(List<DesignOption> value) {
-    _designOptions = value;
-  }
+  set designOptions(List<DesignOption> value) => _designOptions = value;
 }
 
 class DesignOption {

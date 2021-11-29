@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import '../core.dart';
-
 class NavDrawer extends StatefulWidget {
   final Function notifyParent;
-  int _selectedIndex;
-  NavDrawer(this.notifyParent, this._selectedIndex);
+  final int _selectedIndex;
+  const NavDrawer(this.notifyParent, this._selectedIndex);
 
   @override
   _NavDrawerState createState() => _NavDrawerState();
@@ -16,7 +14,7 @@ class _NavDrawerState extends State<NavDrawer> {
     return Drawer(
       child: ListView(
         children: [
-          UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountEmail: Text('ben.rogers@gmail.com'),
             accountName: Text('Benjamin Rogers'),
             currentAccountPicture: CircleAvatar(

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sewistic_app/models/product/product.dart';
+import 'package:sewistic_app/screens/core/product/product_card_search.dart';
 import 'package:sewistic_app/screens/core/product/product_details/product_details.dart';
 import 'package:sewistic_app/screens/core/search/widgets/category_drawer.dart';
-import 'package:sewistic_app/screens/core/product/product_card_search.dart';
 import 'package:sewistic_app/screens/core/search/widgets/search_bar.dart';
 import 'package:sewistic_app/services/product_services.dart';
 import 'package:sewistic_app/shared/card_animations.dart';
@@ -58,7 +58,7 @@ class _SearchState extends State<Search> {
   GridView _productsGridView(List<Product> products) {
     return GridView.count(
       crossAxisCount: 2,
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       childAspectRatio: 1 / 1.52,
       children: List.generate(
         products.length,
@@ -78,7 +78,7 @@ class _SearchState extends State<Search> {
   }
 
   Future<void> _getProducts() async {
-    return await Future.delayed(Duration(seconds: 2), () {
+    return await Future.delayed(const Duration(seconds: 2), () {
       setState(() {
         _products = productService.getHomeProducts();
         _products.shuffle();

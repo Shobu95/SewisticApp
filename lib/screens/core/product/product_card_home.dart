@@ -13,15 +13,15 @@ class ProductCardHome extends StatelessWidget {
     return InkWell(
       onTap: openContainer,
       child: Card(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(4))),
-        margin: EdgeInsets.all(6),
+        margin: const EdgeInsets.all(6),
         elevation: Constants.CARD_ELEVATION,
-        child: Container(
+        child: SizedBox(
           width: 150,
           child: GridTile(
             footer: Material(
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(
                   bottom: Radius.circular(4),
                 ),

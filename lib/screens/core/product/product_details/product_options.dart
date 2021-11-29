@@ -7,7 +7,7 @@ Future<dynamic> orderOptions(
     BuildContext context, List<DesignType> designType) {
   return showModalBottomSheet<dynamic>(
     isScrollControlled: true,
-    shape: RoundedRectangleBorder(
+    shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(16),
         topRight: Radius.circular(16),
@@ -21,12 +21,12 @@ Future<dynamic> orderOptions(
 }
 
 class ProductOptions extends StatelessWidget {
-  List<DesignType> designTypes;
-  ProductOptions(this.designTypes);
+  final List<DesignType> designTypes;
+  const ProductOptions(this.designTypes);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * 0.85,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -74,14 +74,14 @@ class ProductOptions extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Add To Cart',
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
-            SizedBox(
+            const SizedBox(
               width: 14,
             ),
-            Icon(
+            const Icon(
               Icons.add_shopping_cart,
               color: Colors.white,
             ),

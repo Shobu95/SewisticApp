@@ -14,10 +14,10 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Shimmer.fromColors(
-              period: Duration(milliseconds: 2500),
+              period: const Duration(milliseconds: 2500),
               baseColor: Colors.black,
               highlightColor: Colors.white.withOpacity(0.7),
-              child: Container(
+              child: SizedBox(
                 height: 110,
                 child: Image.asset('assets/images/sewistic-logo-web.png', fit: BoxFit.fill,),
               ),
@@ -29,7 +29,7 @@ class SplashScreen extends StatelessWidget {
   }
 
   void showIntroSlider(BuildContext context) {
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => IntroSlider()));
     });

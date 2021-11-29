@@ -7,11 +7,11 @@ class DeliveryAndPayment extends StatefulWidget {
 }
 
 class _DeliveryAndPaymentState extends State<DeliveryAndPayment> {
-  int _deliveryMethod = 1;
-  int _free = 1;
+  final int _deliveryMethod = 1;
+  final int _free = 1;
 
   int _paymentMethod = 1;
-  int _cashOnDelivery = 1;
+  final int _cashOnDelivery = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,11 @@ class _DeliveryAndPaymentState extends State<DeliveryAndPayment> {
             'Shipping and Payment ',
             style: Theme.of(context).textTheme.headline1,
           ),
-          SizedBox(
+          const SizedBox(
             height: 28,
           ),
           _deliveryMethods(),
-          SizedBox(
+          const SizedBox(
             height: 18,
           ),
           _paymentMethods(),
@@ -37,7 +37,7 @@ class _DeliveryAndPaymentState extends State<DeliveryAndPayment> {
 
   Widget _deliveryMethods() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -55,7 +55,7 @@ class _DeliveryAndPaymentState extends State<DeliveryAndPayment> {
                       _paymentMethod = value;
                     });
                   }),
-              Text("Free Pickup and Delivery")
+              const Text("Free Pickup and Delivery")
             ],
           )
         ],
@@ -65,7 +65,7 @@ class _DeliveryAndPaymentState extends State<DeliveryAndPayment> {
 
   Widget _paymentMethods() {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -83,7 +83,7 @@ class _DeliveryAndPaymentState extends State<DeliveryAndPayment> {
                       _paymentMethod = value;
                     });
                   }),
-              Text("Cash on Delivery")
+              const Text("Cash on Delivery")
             ],
           )
         ],

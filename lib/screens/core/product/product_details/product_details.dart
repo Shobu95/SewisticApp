@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sewistic_app/models/order/design_type.dart';
 import 'package:sewistic_app/models/product/product.dart';
 import 'package:sewistic_app/screens/core/product/product_details/product_options.dart';
 import 'package:sewistic_app/shared/constants.dart';
@@ -42,7 +41,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   AppBar _appBar() {
     return AppBar(
-      title: Text(
+      title: const Text(
         'Product Details',
         style: TextStyle(color: Colors.black),
       ),
@@ -81,7 +80,7 @@ class _ProductDetailsState extends State<ProductDetails> {
             autoPlay: true,
             height: 250,
             enlargeCenterPage: true,
-            autoPlayInterval: Duration(seconds: 3),
+            autoPlayInterval: const Duration(seconds: 3),
           ),
         ),
       ),
@@ -89,7 +88,7 @@ class _ProductDetailsState extends State<ProductDetails> {
   }
 
   Widget _detailCard(Product product) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Card(
         elevation: Constants.CARD_ELEVATION,
@@ -109,7 +108,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               const SizedBox(height: 10),
               Text('Rs.' + product.price,
                   style: Theme.of(context).textTheme.headline2),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Text(
@@ -124,7 +123,7 @@ class _ProductDetailsState extends State<ProductDetails> {
   }
 
   Widget _orderControls() {
-    return Container(
+    return SizedBox(
       height: 60,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -132,11 +131,11 @@ class _ProductDetailsState extends State<ProductDetails> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              padding: EdgeInsets.only(left: 12),
+              padding: const EdgeInsets.only(left: 12),
               icon: _wishlist,
               onPressed: () {
                 setState(() {
-                  _wishlist = Icon(
+                  _wishlist = const Icon(
                     Icons.favorite,
                     color: Colors.pink,
                   );
@@ -144,14 +143,14 @@ class _ProductDetailsState extends State<ProductDetails> {
               },
               iconSize: 30,
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Expanded(
               child: FlatButton(
                 height: 45,
                 color: Theme.of(context).primaryColor,
-                child: Text(
+                child: const Text(
                   'Order This Design',
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),

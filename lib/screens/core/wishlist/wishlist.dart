@@ -11,7 +11,7 @@ class Wishlist extends StatefulWidget {
 }
 
 class _WishlistState extends State<Wishlist> {
-  ProductService productService = new ProductService();
+  ProductService productService = ProductService();
   List<Product> wishlist;
 
   @override

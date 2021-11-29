@@ -15,7 +15,7 @@ class _OrderSummaryState extends State<OrderSummary> {
 
   @override
   void initState() {
-    _cartItemsServices = new CartItemsServices();
+    _cartItemsServices = CartItemsServices();
     _cartItems = _cartItemsServices.getCartItems();
   }
 
@@ -28,14 +28,14 @@ class _OrderSummaryState extends State<OrderSummary> {
             'Order Summary',
             style: Theme.of(context).textTheme.headline1,
           ),
-          SizedBox(
+          const SizedBox(
             height: 28,
           ),
           Container(
             child: _orderSummaryItems(),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 6),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 6),
             child: Divider(
               thickness: 1,
               indent: 10,
@@ -44,8 +44,8 @@ class _OrderSummaryState extends State<OrderSummary> {
             ),
           ),
           _orderBillDetails(),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 6, top: 6),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 6, top: 6),
             child: Divider(
               thickness: 1,
               indent: 10,
@@ -54,8 +54,8 @@ class _OrderSummaryState extends State<OrderSummary> {
             ),
           ),
           _total(),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 2, top: 2),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 2, top: 2),
             child: Divider(
               thickness: 1,
               indent: 10,
@@ -97,15 +97,15 @@ class _OrderSummaryState extends State<OrderSummary> {
 
   Widget _subtotal() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'Subtotal (5 items)',
             style: TextStyle(color: Colors.grey),
           ),
-          Text(
+          const Text(
             'Rs.9199',
             style: TextStyle(
               color: Colors.black,
@@ -119,15 +119,15 @@ class _OrderSummaryState extends State<OrderSummary> {
 
   Widget _discount() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'Discount',
             style: TextStyle(color: Colors.grey),
           ),
-          Text(
+          const Text(
             '- Rs.100',
             style: TextStyle(
               color: Colors.green,
@@ -141,15 +141,15 @@ class _OrderSummaryState extends State<OrderSummary> {
 
   Widget _delivery() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'Pickup and Delivery',
             style: TextStyle(color: Colors.grey),
           ),
-          Text('Free',
+          const Text('Free',
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         ],
@@ -159,15 +159,15 @@ class _OrderSummaryState extends State<OrderSummary> {
 
   Widget _paymentMethod() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'Payment Method',
             style: TextStyle(color: Colors.grey),
           ),
-          Text('Cash on Delivery',
+          const Text('Cash on Delivery',
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         ],
@@ -177,11 +177,11 @@ class _OrderSummaryState extends State<OrderSummary> {
 
   Widget _total() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             'Total',
             style: TextStyle(
               color: Colors.black,
@@ -189,7 +189,7 @@ class _OrderSummaryState extends State<OrderSummary> {
               fontSize: 16,
             ),
           ),
-          Text(
+          const Text(
             'Rs.9099',
             style: TextStyle(
               color: Colors.pink,

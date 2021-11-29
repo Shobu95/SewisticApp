@@ -3,10 +3,10 @@ import 'package:sewistic_app/models/product/product.dart';
 import 'package:sewistic_app/shared/constants.dart';
 
 class ProductCardSearch extends StatelessWidget {
-  Product product;
+  final Product product;
   final VoidCallback openContainer;
 
-  ProductCardSearch({this.product, this.openContainer});
+  const ProductCardSearch({this.product, this.openContainer});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class ProductCardSearch extends StatelessWidget {
       onTap: openContainer,
       child: Card(
         elevation: Constants.CARD_ELEVATION,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(4),
           ),
@@ -28,7 +28,7 @@ class ProductCardSearch extends StatelessWidget {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomLeft,
-                padding: EdgeInsets.only(bottom: 6, left: 8, right: 8),
+                padding: const EdgeInsets.only(bottom: 6, left: 8, right: 8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -37,7 +37,7 @@ class ProductCardSearch extends StatelessWidget {
                       product.name,
                       maxLines: 2,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(

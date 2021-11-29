@@ -33,6 +33,7 @@ dev_dependencies:
   network_image_mock: ^2.0.1
   flutter_test:
     sdk: flutter
+  flutter_lints: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

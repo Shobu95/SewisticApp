@@ -34,7 +34,7 @@ class _SettingsCardState extends State<SettingsCard> {
     );
   }
 
-  ListTile _listTile(String _title, IconData _icon, _onTap()) {
+  ListTile _listTile(String _title, IconData _icon, Function() _onTap) {
     return ListTile(
       onTap: _onTap,
       leading: Icon(
