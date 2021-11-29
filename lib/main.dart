@@ -14,7 +14,7 @@ class SewisticApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Constants.APP_NAME,
-      theme: sewisticTheme(),
+      theme: SewisticTheme(),
       home: SplashScreen(),
     );
   }

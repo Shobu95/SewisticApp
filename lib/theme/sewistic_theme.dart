@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-ThemeData sewisticTheme() {
+ThemeData SewisticTheme() {
   return ThemeData(
     primaryColor: Colors.pink[500],
     iconTheme: const IconThemeData(color: Colors.black),
@@ -9,7 +9,8 @@ ThemeData sewisticTheme() {
       builders: <TargetPlatform, PageTransitionsBuilder>{
         TargetPlatform.android: ZoomPageTransitionsBuilder(),
       },
-    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.pink[500]),
+    ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.pink[500]),
   );
 }
 
