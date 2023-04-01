@@ -53,9 +53,8 @@ class _IntroSliderState extends State<IntroSlider> {
     );
   }
 
-  FlatButton skipButton() {
-    return FlatButton(
-      splashColor: Colors.pink[500],
+  TextButton skipButton() {
+    return TextButton(
       child: Text(
         "SKIP",
         style: TextStyle(
@@ -84,9 +83,8 @@ class _IntroSliderState extends State<IntroSlider> {
     );
   }
 
-  FlatButton nextButton() {
-    return FlatButton(
-      splashColor: Colors.pink[500],
+  TextButton nextButton() {
+    return TextButton(
       child: Text(
         "NEXT",
         style: TextStyle(

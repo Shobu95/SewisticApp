@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sewistic_app/screens/core/checkout/widgets/my_stepper.dart';
 
 class Checkout extends StatefulWidget {
@@ -62,10 +61,7 @@ class _CheckoutState extends State<Checkout> {
   }
 
   Widget _proceedBtn() {
-    return FlatButton(
-      height: 45,
-      color: Colors.pink,
-      disabledColor: Colors.pink[100],
+    return TextButton(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

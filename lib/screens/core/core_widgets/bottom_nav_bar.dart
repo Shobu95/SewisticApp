@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core.dart';
 
 class BottomNavBar extends StatefulWidget {
   final Function notifyParent;
@@ -27,23 +26,23 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return const <BottomNavigationBarItem>[
       BottomNavigationBarItem(
         icon: Icon(Icons.home),
-        title: Text('Home'),
+        label: 'Home',
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.search),
-        title: Text('Search'),
+        label: 'Search',
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.favorite),
-        title: Text('Wishlist'),
+        label: 'Wishlist',
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.shopping_basket),
-        title: Text('Orders'),
+        label: 'Orders',
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.settings),
-        title: Text('Settings'),
+        label: 'Settings',
       ),
     ];
   }

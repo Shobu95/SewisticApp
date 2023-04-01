@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sewistic_app/models/order/cart_item.dart';
 import 'package:sewistic_app/screens/core/cart/widgets/cart_item_card.dart';
@@ -132,10 +131,7 @@ class CartState extends State<Cart> {
                     SizedBox(
                       height: 20,
                     ),
-                    FlatButton(
-                      height: 45,
-                      minWidth: double.infinity,
-                      color: Colors.pink,
+                    TextButton(
                       child: Text(
                         'Enter',
                         style: TextStyle(color: Colors.white, fontSize: 16),
@@ -179,10 +175,7 @@ class CartState extends State<Cart> {
   }
 
   Widget _checkoutBtn(BuildContext context) {
-    return FlatButton(
-      height: 45,
-      color: Colors.pink,
-      disabledColor: Colors.pink[100],
+    return TextButton(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

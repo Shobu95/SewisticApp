@@ -68,9 +68,7 @@ class ProductOptions extends StatelessWidget {
   Widget _addToCartBtn(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: FlatButton(
-        height: 45,
-        color: Colors.pink,
+      child: TextButton(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

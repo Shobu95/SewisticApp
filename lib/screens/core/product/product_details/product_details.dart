@@ -1,7 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:sewistic_app/models/order/design_type.dart';
 import 'package:sewistic_app/models/product/product.dart';
 import 'package:sewistic_app/screens/core/product/product_details/product_options.dart';
 import 'package:sewistic_app/shared/constants.dart';
@@ -148,9 +146,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               width: 20,
             ),
             Expanded(
-              child: FlatButton(
-                height: 45,
-                color: Theme.of(context).primaryColor,
+              child: TextButton(
                 child: Text(
                   'Order This Design',
                   style: TextStyle(color: Colors.white, fontSize: 16),
